@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterBadge render do not hide value snapshot 1`] = `
+<div>
+  <span
+    className="badge badge-info"
+  >
+    <span>
+      a common name
+    </span>
+    <span>
+      : a common value
+    </span>
+    <Button
+      aria-label="close"
+      className="btn-info"
+      onClick={
+        Object {
+          "handleClose": Array [
+            "some",
+            "filters",
+          ],
+        }
+      }
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </Button>
+  </span>
+  <br />
+</div>
+`;
+
+exports[`FilterBadge render hide Value snapshot 1`] = `
+<div>
+  <span
+    className="badge badge-info"
+  >
+    <span>
+      a common name
+    </span>
+    <span />
+    <Button
+      aria-label="close"
+      className="btn-info"
+      onClick={
+        Object {
+          "handleClose": Array [
+            "some",
+            "filters",
+          ],
+        }
+      }
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </Button>
+  </span>
+  <br />
+</div>
+`;

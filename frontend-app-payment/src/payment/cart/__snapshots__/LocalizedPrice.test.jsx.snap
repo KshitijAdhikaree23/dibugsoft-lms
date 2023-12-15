@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocalizedPrice should render localized currency 1`] = `
+<span>
+  MX$190
+   *
+</span>
+`;
+
+exports[`LocalizedPrice should render unlocalized currency 1`] = `"$10.00"`;

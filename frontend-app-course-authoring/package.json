@@ -1,0 +1,101 @@
+{
+  "name": "@edx/frontend-app-course-authoring",
+  "version": "0.1.0",
+  "description": "Frontend application template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openedx/frontend-app-course-authoring.git"
+  },
+  "browserslist": [
+    "extends @edx/browserslist-config"
+  ],
+  "scripts": {
+    "build": "fedx-scripts webpack",
+    "i18n_extract": "fedx-scripts formatjs extract",
+    "stylelint": "stylelint \"src/**/*.scss\" \"scss/**/*.scss\" --config .stylelintrc.json",
+    "lint": "npm run stylelint && fedx-scripts eslint --ext .js --ext .jsx .",
+    "lint:fix": "npm run stylelint && fedx-scripts eslint --ext .js --ext .jsx . --fix",
+    "snapshot": "fedx-scripts jest --updateSnapshot",
+    "start": "fedx-scripts webpack-dev-server --progress",
+    "test": "fedx-scripts jest --coverage --passWithNoTests",
+    "types": "tsc --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "author": "edX",
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/openedx/frontend-app-course-authoring#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/openedx/frontend-app-course-authoring/issues"
+  },
+  "dependencies": {
+    "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
+    "@edx/frontend-component-ai-translations-edx": "^1.4.1",
+    "@edx/frontend-component-footer": "^12.3.0",
+    "@edx/frontend-component-header": "^4.7.0",
+    "@edx/frontend-enterprise-hotjar": "^2.0.0",
+    "@edx/frontend-lib-content-components": "1.176.4",
+    "@edx/frontend-platform": "5.6.1",
+    "@edx/paragon": "^21.5.6",
+    "@fortawesome/fontawesome-svg-core": "1.2.36",
+    "@fortawesome/free-brands-svg-icons": "5.15.4",
+    "@fortawesome/free-regular-svg-icons": "5.15.4",
+    "@fortawesome/free-solid-svg-icons": "5.15.4",
+    "@fortawesome/react-fontawesome": "0.2.0",
+    "@reduxjs/toolkit": "1.9.7",
+    "@tanstack/react-query": "4.36.1",
+    "classnames": "2.2.6",
+    "core-js": "3.8.1",
+    "email-validator": "2.0.4",
+    "file-saver": "^2.0.5",
+    "formik": "2.2.6",
+    "jszip": "^3.10.1",
+    "lodash": "4.17.21",
+    "moment": "2.29.4",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-datepicker": "^4.13.0",
+    "react-dom": "17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-redux": "7.2.9",
+    "react-responsive": "9.0.2",
+    "react-router": "6.16.0",
+    "react-router-dom": "6.16.0",
+    "react-textarea-autosize": "^8.4.1",
+    "react-transition-group": "4.4.5",
+    "redux": "4.0.5",
+    "regenerator-runtime": "0.13.7",
+    "universal-cookie": "^4.0.4",
+    "uuid": "^3.4.0",
+    "yup": "0.31.1"
+  },
+  "devDependencies": {
+    "@edx/browserslist-config": "1.2.0",
+    "@edx/frontend-build": "13.0.5",
+    "@edx/reactifex": "^1.0.3",
+    "@edx/stylelint-config-edx": "^2.3.0",
+    "@edx/typescript-config": "^1.0.1",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "12.1.5",
+    "@testing-library/user-event": "^13.2.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "0.8.0",
+    "axios-mock-adapter": "1.22.0",
+    "enzyme": "3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "glob": "7.2.3",
+    "husky": "7.0.4",
+    "jest-canvas-mock": "^2.5.2",
+    "react-test-renderer": "17.0.2",
+    "reactifex": "1.1.1",
+    "ts-loader": "^9.5.0"
+  },
+  "peerDependencies": {
+    "decode-uri-component": ">=0.2.2"
+  }
+}
